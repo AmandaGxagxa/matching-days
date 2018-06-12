@@ -1,0 +1,25 @@
+*{
+  margin: auto;
+}
+body{
+  text-align: center;
+}
+input{
+  border: 1 solid red;
+  border-radius: 2em;
+}
+
+.date1{
+  color: orange;
+}
+
+.date2{
+  color: red;
+}
+
+.sameDay{
+  color: green;
+}
+.matchingDaysTemplate{
+  margin-left: 20px;
+}
