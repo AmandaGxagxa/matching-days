@@ -10,15 +10,18 @@ input{
 }
 
 .date1{
-  color: blue;
+  font-weight: bold;
+  background-color: blue;
 }
 
 .date2{
-  color: red;
+  background-color: red;
+  font-weight: bold;
 }
 
 .sameDay{
-  color: green;
+  font-weight: bold;
+  background-color: green;
 }
 .matchingDaysTemplate{
   margin-left: 20px;
