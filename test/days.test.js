@@ -24,7 +24,7 @@ describe('Matching Days Function', function() {
     var matchingDays = MatchingDays()
     matchingDays.forDate1('2018-06-12');
     matchingDays.forDate2('2018-06-15');
-    console.log(matchingDays.createContext());
+    //console.log(matchingDays.createContext());
     assert.deepEqual(matchingDays.createContext(), {
       'Sunday': {dayName: 'Sunday'},
       'Monday': {dayName: 'Monday'},
@@ -32,6 +32,22 @@ describe('Matching Days Function', function() {
       'Wednesday': {dayName: 'Wednesday'},
       'Thursday': {dayName: 'Thursday'},
       'Friday': {dayName: 'Friday', date2: true},
+      'Saturday': {dayName: 'Saturday'}
+    });
+
+  })
+  it('Should return an object with the days of the week and  day1 and day2 days. also whether or not they match', function() {
+    var matchingDays = MatchingDays()
+    matchingDays.forDate1('2018-06-12');
+    matchingDays.forDate2('2018-06-12');
+    //console.log(matchingDays.createContext());
+    assert.deepEqual(matchingDays.createContext(), {
+      'Sunday': {dayName: 'Sunday'},
+      'Monday': {dayName: 'Monday'},
+      'Tuesday': {dayName: 'Tuesday', sameDay: true},
+      'Wednesday': {dayName: 'Wednesday'},
+      'Thursday': {dayName: 'Thursday'},
+      'Friday': {dayName: 'Friday'},
       'Saturday': {dayName: 'Saturday'}
     });
 
