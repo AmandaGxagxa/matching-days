@@ -19,8 +19,9 @@ describe('Matching Days Function', function() {
     assert.equal( matchingDays.sameWeekday(), true);
 
   })
-
-  it('Should return an object with the days of the week and  day1 and day2 days. also whether or not they match', function() {
+});
+describe('Matching Days Function that returns object with days of the week and day1 and day2', function() {
+  it('Should return an object with the days of the week and  day1(Tuesday) and day2(Friday) days. also whether or not they match', function() {
     var matchingDays = MatchingDays()
     matchingDays.forDate1('2018-06-12');
     matchingDays.forDate2('2018-06-15');
@@ -36,7 +37,7 @@ describe('Matching Days Function', function() {
     });
 
   })
-  it('Should return an object with the days of the week and  day1 and day2 days. also whether or not they match', function() {
+  it('Should return an object with the days of the week and  day1(Saturday) and day2(Saturday) days. also whether or not they match', function() {
     var matchingDays = MatchingDays()
     matchingDays.forDate1('2018-06-16');
     matchingDays.forDate2('2018-06-9');
@@ -52,7 +53,7 @@ describe('Matching Days Function', function() {
     });
 
   })
-  it('Should return an object with the days of the week and  day1 and day2 days. also whether or not they match', function() {
+  it('Should return an object with the days of the week and  day1(Monday) and day2(Thursday) days. also whether or not they match', function() {
     var matchingDays = MatchingDays()
     matchingDays.forDate1('2018-06-11');
     matchingDays.forDate2('2018-06-14');
@@ -68,7 +69,7 @@ describe('Matching Days Function', function() {
     });
 
   })
-  it('Should return an object with the days of the week and  day1 and day2 days. also whether or not they match', function() {
+  it('Should return an object with the days of the week and  day1(Sunday) and day2(Wednesday) days. also whether or not they match', function() {
     var matchingDays = MatchingDays()
     matchingDays.forDate1('2018-06-10');
     matchingDays.forDate2('2018-06-13');
@@ -84,7 +85,4 @@ describe('Matching Days Function', function() {
     });
 
   })
-
-
-
 })
