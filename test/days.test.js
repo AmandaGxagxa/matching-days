@@ -38,19 +38,53 @@ describe('Matching Days Function', function() {
   })
   it('Should return an object with the days of the week and  day1 and day2 days. also whether or not they match', function() {
     var matchingDays = MatchingDays()
-    matchingDays.forDate1('2018-06-12');
-    matchingDays.forDate2('2018-06-12');
+    matchingDays.forDate1('2018-06-16');
+    matchingDays.forDate2('2018-06-9');
     //console.log(matchingDays.createContext());
     assert.deepEqual(matchingDays.createContext(), {
       'Sunday': {dayName: 'Sunday'},
       'Monday': {dayName: 'Monday'},
-      'Tuesday': {dayName: 'Tuesday', sameDay: true},
+      'Tuesday': {dayName: 'Tuesday'},
       'Wednesday': {dayName: 'Wednesday'},
+      'Thursday': {dayName: 'Thursday'},
+      'Friday': {dayName: 'Friday'},
+      'Saturday': {dayName: 'Saturday', sameDay: true}
+    });
+
+  })
+  it('Should return an object with the days of the week and  day1 and day2 days. also whether or not they match', function() {
+    var matchingDays = MatchingDays()
+    matchingDays.forDate1('2018-06-11');
+    matchingDays.forDate2('2018-06-14');
+    //console.log(matchingDays.createContext());
+    assert.deepEqual(matchingDays.createContext(), {
+      'Sunday': {dayName: 'Sunday'},
+      'Monday': {dayName: 'Monday', date1:true},
+      'Tuesday': {dayName: 'Tuesday'},
+      'Wednesday': {dayName: 'Wednesday'},
+      'Thursday': {dayName: 'Thursday', date2:true},
+      'Friday': {dayName: 'Friday'},
+      'Saturday': {dayName: 'Saturday'}
+    });
+
+  })
+  it('Should return an object with the days of the week and  day1 and day2 days. also whether or not they match', function() {
+    var matchingDays = MatchingDays()
+    matchingDays.forDate1('2018-06-10');
+    matchingDays.forDate2('2018-06-13');
+    //console.log(matchingDays.createContext());
+    assert.deepEqual(matchingDays.createContext(), {
+      'Sunday': {dayName: 'Sunday', date1:true},
+      'Monday': {dayName: 'Monday'},
+      'Tuesday': {dayName: 'Tuesday'},
+      'Wednesday': {dayName: 'Wednesday', date2:true},
       'Thursday': {dayName: 'Thursday'},
       'Friday': {dayName: 'Friday'},
       'Saturday': {dayName: 'Saturday'}
     });
 
   })
+
+
 
 })

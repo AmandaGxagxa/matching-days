@@ -1,14 +1,15 @@
 *{
   margin: auto;
 }
+
 body{
   text-align: center;
+
 }
 input{
   border: 1 solid red;
   border-radius: 2em;
 }
-
 .date1{
   font-weight: bold;
   background-color: #007eff;
@@ -25,4 +26,10 @@ input{
 }
 .matchingDaysTemplate{
   margin-left: 20px;
+}
+@media only screen and (max-width: 600px) {
+tr{
+
+}
+
 }
